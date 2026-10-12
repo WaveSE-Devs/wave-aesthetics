@@ -1,5 +1,5 @@
 /* Tailwind v3 preset. Fonts and shadows point at the CSS variables in
-   colors_and_type.css, so import that file too.
+   tokens.css (`import "wave-aesthetics"`), so import that too.
 
    // tailwind.config.ts
    presets: [require("wave-aesthetics/tailwind/preset")]

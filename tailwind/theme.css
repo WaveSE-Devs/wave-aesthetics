@@ -1,4 +1,4 @@
-/* Tailwind v4 theme. Maps the tokens in colors_and_type.css to utilities
+/* Tailwind v4 theme. Maps the tokens in tokens.css to utilities
    (bg-volt, text-fg-muted, border-line, font-display, ...).
 
    @import "tailwindcss";
@@ -55,7 +55,7 @@
   --color-intent-danger: var(--intent-danger);
   --color-intent-info: var(--intent-info);
 
-  /* Same stacks as colors_and_type.css. Written out, not var(--font-*),
+  /* Same stacks as tokens.css. Written out, not var(--font-*),
      because Tailwind uses the same variable names. */
   --font-display: "Zalando Sans Expanded", "Pragmatica Extended", "Helvetica Neue Condensed", system-ui, sans-serif;
   --font-sans: "Zalando Sans", "Pragmatica", "Inter", system-ui, sans-serif;

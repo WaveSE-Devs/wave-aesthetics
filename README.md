@@ -24,9 +24,9 @@ This repo is an npm package. Every Wave tool installs it instead of keeping its 
 npm install github:WaveSE-Devs/wave-aesthetics
 ```
 
-Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.2.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
+Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.3.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
 
-**Tokens, fonts and element defaults.** Import once, at the root of the app. The fonts load from this package, so you don't copy them into `public/`.
+**Tokens and fonts.** Import once, at the root of the app. This loads `tokens.css`: fonts, CSS variables, the heading face, `.eyebrow` / `.spec`, the Volt focus ring. The fonts load from this package, so you don't copy them into `public/`. It leaves the size and spacing of plain elements to your app.
 
 ```ts
 // Next.js — src/app/layout.tsx
@@ -52,7 +52,7 @@ presets: [require("wave-aesthetics/tailwind/preset")],
 | Accent | `text-wave-volt`, `bg-wave-volt text-wave-night` (never white on Volt) |
 | Secondary palette (taxonomy only) / greys | `bg-wave-cyan`, `text-wave-red`, `bg-wave-grey-800`, ... |
 | Display / body / spec / editorial fonts | `font-display` / `font-sans` / `font-mono` / `font-serif` |
-| Eyebrow or spec label | `.eyebrow`, `.spec` (from `colors_and_type.css`) |
+| Eyebrow or spec label | `.eyebrow`, `.spec` (from `tokens.css`) |
 | Radius | Surfaces are sharp: `rounded-lg`, `rounded-xl`, `rounded-2xl` all resolve to 0. `rounded` / `rounded-md` (2–4px) for dense controls. `rounded-full` only for tags, badges, avatars. |
 | Motion | `duration-quick ease-wave` for color/border changes |
 
@@ -66,7 +66,7 @@ presets: [require("wave-aesthetics/tailwind/preset")],
 
 **Logos.** Import the SVGs (`import icon from "wave-aesthetics/assets/wave-icon.svg"`), or copy them into `public/` when you need a fixed URL, such as a favicon.
 
-**Plain HTML / prototypes.** Link `colors_and_type.css` directly. The `preview/` cards and `ui_kits/` show it in use.
+**Plain HTML / prototypes.** Link `colors_and_type.css`, which adds `elements.css` (sizes and spacing for `h1`–`h4`, `p`, `small`, `code`, `blockquote`) so unstyled HTML already looks Wave. The `preview/` cards and `ui_kits/` show it in use.
 
 **Changing the system.** Edit it here, not in an app. Then tag a release and bump the ref in each app that should get the change.
 
@@ -78,7 +78,7 @@ The Wave brand guideline specifies **Pragmatica** (display + body) and **Space G
 
 We substitute **Zalando Sans Expanded** for *Pragmatica Extended* (headers / display) and **Zalando Sans** for *Pragmatica* (body) — both are wide grotesks with similar proportions and a high x-height. **Space Grotesk** and **IBM Plex Serif** are the real fonts.
 
-→ **Action requested:** if you have Pragmatica licenses, drop the `.woff2` / `.ttf` files into `fonts/` and update the `@font-face` blocks in `colors_and_type.css`. The token names already point to the correct family — no other code needs to change.
+→ **Action requested:** if you have Pragmatica licenses, drop the `.woff2` / `.ttf` files into `fonts/` and update the `@font-face` blocks in `tokens.css`. The token names already point to the correct family — no other code needs to change.
 
 ---
 
@@ -88,7 +88,9 @@ We substitute **Zalando Sans Expanded** for *Pragmatica Extended* (headers / dis
 |---|---|
 | `README.md` | This file — brand context, content fundamentals, visual foundations, iconography. |
 | `SKILL.md` | Agent skill manifest. Tells Claude / agents how to use this system. |
-| `colors_and_type.css` | **Single source of truth** for color + type tokens, fonts, semantic element styles. |
+| `tokens.css` | **Single source of truth** for color + type tokens, fonts, label classes, focus ring. What apps import. |
+| `elements.css` | Sizes and spacing for plain elements, for unstyled HTML. |
+| `colors_and_type.css` | Both of the above, for plain HTML and prototypes. |
 | `tailwind/preset.js` | Tailwind v3 preset mapping the tokens to utilities. |
 | `tailwind/theme.css` | Tailwind v4 `@theme` mapping the tokens to utilities. |
 | `package.json` | Makes the repo installable (`npm install github:WaveSE-Devs/wave-aesthetics`). |

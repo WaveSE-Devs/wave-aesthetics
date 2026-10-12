@@ -1,0 +1,32 @@
+/* =========================================================
+   WAVE — Element defaults
+   Sizes and spacing for plain elements, so unstyled HTML in mocks
+   already looks Wave. Loaded by colors_and_type.css. Apps that size
+   text with their own classes (Tailwind) skip this file: a font
+   shorthand on <p> stops it inheriting its parent's size.
+   ========================================================= */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font: var(--t-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 { font: var(--t-h1); letter-spacing: var(--tracking-tight); margin: 0; }
+h2 { font: var(--t-h2); letter-spacing: var(--tracking-tight); margin: 0; }
+h3 { font: var(--t-h3); letter-spacing: var(--tracking-tight); margin: 0; }
+h4 { font: var(--t-h4); letter-spacing: var(--tracking-tight); margin: 0; }
+
+p  { font: var(--t-body); margin: 0 0 var(--space-4) 0; }
+small { font: var(--t-body-sm); color: var(--fg-muted); }
+code, kbd, samp { font: var(--t-mono); letter-spacing: var(--tracking-mono); }
+
+/* Editorial / pull-quote */
+blockquote {
+  font: var(--t-serif-quote);
+  font-style: italic;
+  color: var(--fg);
+  border-left: 2px solid var(--volt);
+  padding: var(--space-3) var(--space-5);
+  margin: 0;
+}

@@ -24,7 +24,7 @@ This repo is an npm package. Every Wave tool installs it instead of keeping its 
 npm install github:WaveSE-Devs/wave-aesthetics
 ```
 
-Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.1.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
+Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.2.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
 
 **Tokens, fonts and element defaults.** Import once, at the root of the app. The fonts load from this package, so you don't copy them into `public/`.
 
@@ -43,6 +43,18 @@ import "wave-aesthetics";
 ```ts
 presets: [require("wave-aesthetics/tailwind/preset")],
 ```
+
+| Need | Use |
+|---|---|
+| Page canvas / card / hovered card | `bg-wave-night` / `bg-wave-slate` / `bg-wave-elev` |
+| Hairline border | `border-wave-line` (stronger: `border-wave-line-strong`) |
+| Text: primary / muted / dim | `text-wave-silver` / `text-wave-muted` / `text-wave-clay` |
+| Accent | `text-wave-volt`, `bg-wave-volt text-wave-night` (never white on Volt) |
+| Secondary palette (taxonomy only) / greys | `bg-wave-cyan`, `text-wave-red`, `bg-wave-grey-800`, ... |
+| Display / body / spec / editorial fonts | `font-display` / `font-sans` / `font-mono` / `font-serif` |
+| Eyebrow or spec label | `.eyebrow`, `.spec` (from `colors_and_type.css`) |
+| Radius | Surfaces are sharp: `rounded-lg`, `rounded-xl`, `rounded-2xl` all resolve to 0. `rounded` / `rounded-md` (2–4px) for dense controls. `rounded-full` only for tags, badges, avatars. |
+| Motion | `duration-quick ease-wave` for color/border changes |
 
 **Tailwind v4** (`globals.css`):
 

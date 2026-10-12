@@ -291,5 +291,8 @@ blockquote {
 .display-xl  { font: var(--t-display-xl);  letter-spacing: var(--tracking-tight); }
 .display-lg  { font: var(--t-display-lg);  letter-spacing: var(--tracking-tight); }
 
+/* Focus visible: 2px Volt outline, 2px offset, never blurred */
+:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; }
+
 /* Selection */
 ::selection { background: var(--volt); color: var(--fg-on-volt); }

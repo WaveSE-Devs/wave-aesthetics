@@ -1,4 +1,4 @@
-/* Tailwind v3 preset. Colors point at the CSS variables in
+/* Tailwind v3 preset. Fonts and shadows point at the CSS variables in
    colors_and_type.css, so import that file too.
 
    // tailwind.config.ts
@@ -9,57 +9,48 @@ const v = (name) => `var(--${name})`;
 module.exports = {
   theme: {
     extend: {
+      // Hex, not var(), so opacity modifiers work (bg-wave-night/80).
+      // Everything sits under `wave` so Tailwind's own red/green/... scales stay intact.
       colors: {
         wave: {
-          volt: v("volt"),
-          silver: v("silver"),
-          clay: v("clay"),
-          slate: v("slate"),
-          night: v("night"),
-          elev: v("bg-elev-2"),
-          line: v("line"),
-          "line-strong": v("line-strong"),
-          muted: v("fg-muted"),
+          volt: "#E3F643",
+          silver: "#FAF7F4",
+          clay: "#94958B",
+          slate: "#212922",
+          night: "#0B0909",
+          elev: "#2A332B",
+          line: "#2E332E",
+          "line-strong": "#3F4640",
+          muted: "#B7B8AF",
+
+          // Secondary palette: taxonomy only, never decoration.
+          yellow: "#FFC421",
+          orange: "#FF8712",
+          red: "#FA3842",
+          pink: "#D12670",
+          purple: "#A11791",
+          violet: "#A60AFF",
+          indigo: "#590FFF",
+          blue: "#0A16FF",
+          azure: "#007DFF",
+          cyan: "#0AC2FF",
+          teal: "#69EDE9",
+          green: "#0BDD65",
+
+          grey: {
+            950: "#0B0909",
+            900: "#14161A",
+            800: "#212922",
+            700: "#2E332E",
+            600: "#4B504A",
+            500: "#6B6F66",
+            400: "#94958B",
+            300: "#B7B8AF",
+            200: "#D6D6CF",
+            100: "#ECEAE3",
+            50: "#FAF7F4",
+          },
         },
-        bg: {
-          DEFAULT: v("bg"),
-          "elev-1": v("bg-elev-1"),
-          "elev-2": v("bg-elev-2"),
-          inverse: v("bg-inverse"),
-        },
-        fg: {
-          DEFAULT: v("fg"),
-          muted: v("fg-muted"),
-          dim: v("fg-dim"),
-          inverse: v("fg-inverse"),
-          "on-volt": v("fg-on-volt"),
-          accent: v("fg-accent"),
-        },
-        line: {
-          DEFAULT: v("line"),
-          strong: v("line-strong"),
-        },
-        intent: {
-          success: v("intent-success"),
-          warning: v("intent-warning"),
-          danger: v("intent-danger"),
-          info: v("intent-info"),
-        },
-        yellow: v("yellow"),
-        orange: v("orange"),
-        red: v("red"),
-        pink: v("pink"),
-        purple: v("purple"),
-        violet: v("violet"),
-        indigo: v("indigo"),
-        blue: v("blue"),
-        azure: v("azure"),
-        cyan: v("cyan"),
-        teal: v("teal"),
-        green: v("green"),
-        grey: Object.fromEntries(
-          [950, 900, 800, 700, 600, 500, 400, 300, 200, 100, 50].map((n) => [n, v(`grey-${n}`)])
-        ),
       },
       fontFamily: {
         sans: [v("font-sans")],
@@ -89,7 +80,7 @@ module.exports = {
         pop: v("shadow-pop"),
       },
       transitionTimingFunction: {
-        wave: v("ease-standard"),
+        wave: "cubic-bezier(0.2, 0, 0, 1)",
       },
       transitionDuration: {
         quick: "120ms",

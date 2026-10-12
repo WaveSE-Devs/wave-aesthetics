@@ -56,11 +56,11 @@ presets: [require("wave-aesthetics/tailwind/preset")],
 | Radius | Surfaces are sharp: `rounded-lg`, `rounded-xl`, `rounded-2xl` all resolve to 0. `rounded` / `rounded-md` (2–4px) for dense controls. `rounded-full` only for tags, badges, avatars. |
 | Motion | `duration-quick ease-wave` for color/border changes |
 
-**Tailwind v4** (`globals.css`):
+**Tailwind v4** (`globals.css`). Put the tokens in the `base` layer: unlayered CSS beats every Tailwind layer, so otherwise `.eyebrow`'s color would win over `eyebrow text-wave-volt`.
 
 ```css
 @import "tailwindcss";
-@import "wave-aesthetics";
+@import "wave-aesthetics" layer(base);
 @import "wave-aesthetics/tailwind/theme.css";
 ```
 

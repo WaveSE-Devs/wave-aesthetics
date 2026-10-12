@@ -2,7 +2,7 @@
    (bg-volt, text-fg-muted, border-line, font-display, ...).
 
    @import "tailwindcss";
-   @import "wave-aesthetics";
+   @import "wave-aesthetics" layer(base);
    @import "wave-aesthetics/tailwind/theme.css";
 */
 @theme inline {

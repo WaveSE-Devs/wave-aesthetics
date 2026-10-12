@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:340px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .show{display:flex;flex-direction:column;gap:10px}
+  .poster{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:#1a201a}
+  .poster .img{position:absolute;inset:0;background:linear-gradient(135deg,#2a3328 0%,#0b0909 60%);display:flex;align-items:flex-end;padding:14px}
+  .poster .img.alt{background:linear-gradient(135deg,#3a3a45 0%,#0b0909 60%)}
+  .poster .title{font-family:var(--font-display);font-weight:600;font-size:24px;line-height:1;letter-spacing:-.025em;color:var(--silver);text-transform:uppercase}
+  .poster .badge{position:absolute;top:10px;left:10px;font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;background:var(--volt);color:var(--night)}
+  .poster .badge.alt{background:transparent;color:var(--silver);border:1px solid var(--silver)}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .meta .l{font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;color:var(--clay)}
+  .meta .r{font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;color:var(--silver)}
+  .desc{font:var(--t-body-sm);color:var(--fg-muted)}
+  .show.hover .poster{box-shadow:8px 8px 0 0 var(--volt)}
+</style></head>
+<body>
+  <div class="show">
+    <div class="poster">
+      <div class="img"><div class="title">The Bench</div></div>
+      <span class="badge">NEW</span>
+    </div>
+    <div class="meta"><div class="l">DOC SERIES · 8 EP</div><div class="r">FRI · NOV 14</div></div>
+    <div class="desc">A season inside the locker room with the league's most-traded player.</div>
+  </div>
+  <div class="show hover">
+    <div class="poster">
+      <div class="img alt"><div class="title">Off Lap</div></div>
+      <span class="badge alt">PODCAST</span>
+    </div>
+    <div class="meta"><div class="l">PODCAST · WEEKLY</div><div class="r">EP. 22 LIVE</div></div>
+    <div class="desc">Hover state — 8px Volt offset shadow. Brutalist accent.</div>
+  </div>
+</body></html>

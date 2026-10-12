@@ -1,0 +1,25 @@
+{
+  "name": "wave-aesthetics",
+  "version": "0.1.0",
+  "description": "Shared Wave Sports & Entertainment design system: tokens, fonts, logos, Tailwind presets and UI principles.",
+  "private": true,
+  "license": "UNLICENSED",
+  "repository": "github:WaveSE-Devs/wave-aesthetics",
+  "exports": {
+    ".": "./colors_and_type.css",
+    "./colors_and_type.css": "./colors_and_type.css",
+    "./tailwind/preset": "./tailwind/preset.js",
+    "./tailwind/theme.css": "./tailwind/theme.css",
+    "./fonts/*": "./fonts/*",
+    "./assets/*": "./assets/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "colors_and_type.css",
+    "fonts",
+    "assets",
+    "tailwind",
+    "README.md",
+    "SKILL.md"
+  ]
+}

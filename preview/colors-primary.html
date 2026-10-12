@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:200px}
+  .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line)}
+  .sw{padding:16px 14px;display:flex;flex-direction:column;justify-content:space-between;height:148px;border-right:1px solid var(--line);position:relative}
+  .sw:last-child{border-right:0}
+  .sw .name{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase}
+  .sw .hex{font:var(--t-mono-sm);letter-spacing:.04em;opacity:.7}
+  .sw[data-light="1"]{color:var(--night)}
+  .sw[data-light="0"]{color:var(--silver)}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="sw" style="background:#E3F643" data-light="1">
+      <div></div>
+      <div><div class="name">Volt</div><div class="hex">#E3F643</div></div>
+    </div>
+    <div class="sw" style="background:#FAF7F4" data-light="1">
+      <div></div>
+      <div><div class="name">Silver</div><div class="hex">#FAF7F4</div></div>
+    </div>
+    <div class="sw" style="background:#94958B" data-light="1">
+      <div></div>
+      <div><div class="name">Clay</div><div class="hex">#94958B</div></div>
+    </div>
+    <div class="sw" style="background:#212922" data-light="0">
+      <div></div>
+      <div><div class="name">Slate</div><div class="hex">#212922</div></div>
+    </div>
+    <div class="sw" style="background:#0B0909" data-light="0">
+      <div></div>
+      <div><div class="name">Night</div><div class="hex">#0B0909</div></div>
+    </div>
+  </div>
+</body></html>

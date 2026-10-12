@@ -1,0 +1,83 @@
+/* Tailwind v4 theme. Maps the tokens in colors_and_type.css to utilities
+   (bg-volt, text-fg-muted, border-line, font-display, ...).
+
+   @import "tailwindcss";
+   @import "wave-aesthetics";
+   @import "wave-aesthetics/tailwind/theme.css";
+*/
+@theme inline {
+  --color-volt: var(--volt);
+  --color-silver: var(--silver);
+  --color-clay: var(--clay);
+  --color-slate: var(--slate);
+  --color-night: var(--night);
+
+  --color-yellow: var(--yellow);
+  --color-orange: var(--orange);
+  --color-red: var(--red);
+  --color-pink: var(--pink);
+  --color-purple: var(--purple);
+  --color-violet: var(--violet);
+  --color-indigo: var(--indigo);
+  --color-blue: var(--blue);
+  --color-azure: var(--azure);
+  --color-cyan: var(--cyan);
+  --color-teal: var(--teal);
+  --color-green: var(--green);
+
+  --color-grey-950: var(--grey-950);
+  --color-grey-900: var(--grey-900);
+  --color-grey-800: var(--grey-800);
+  --color-grey-700: var(--grey-700);
+  --color-grey-600: var(--grey-600);
+  --color-grey-500: var(--grey-500);
+  --color-grey-400: var(--grey-400);
+  --color-grey-300: var(--grey-300);
+  --color-grey-200: var(--grey-200);
+  --color-grey-100: var(--grey-100);
+  --color-grey-50: var(--grey-50);
+
+  --color-bg: var(--bg);
+  --color-bg-elev-1: var(--bg-elev-1);
+  --color-bg-elev-2: var(--bg-elev-2);
+  --color-bg-inverse: var(--bg-inverse);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-dim: var(--fg-dim);
+  --color-fg-inverse: var(--fg-inverse);
+  --color-fg-on-volt: var(--fg-on-volt);
+  --color-fg-accent: var(--fg-accent);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+
+  --color-intent-success: var(--intent-success);
+  --color-intent-warning: var(--intent-warning);
+  --color-intent-danger: var(--intent-danger);
+  --color-intent-info: var(--intent-info);
+
+  /* Same stacks as colors_and_type.css. Written out, not var(--font-*),
+     because Tailwind uses the same variable names. */
+  --font-display: "Zalando Sans Expanded", "Pragmatica Extended", "Helvetica Neue Condensed", system-ui, sans-serif;
+  --font-sans: "Zalando Sans", "Pragmatica", "Inter", system-ui, sans-serif;
+  --font-mono: "Space Grotesk", "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: "IBM Plex Serif", "Times New Roman", serif;
+
+  --tracking-tight: -0.025em;
+  --tracking-spec: 0.08em;
+  --tracking-mono: 0.04em;
+
+  /* Brutalist: surfaces are sharp, small controls get 2–4px. */
+  --radius-sm: 2px;
+  --radius: 2px;
+  --radius-md: 4px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+
+  --shadow-flat: 0 0 0 1px var(--line);
+  --shadow-card: 0 0 0 1px var(--line), 0 1px 0 0 rgba(0, 0, 0, 0.4);
+  --shadow-volt: 0 0 0 2px var(--volt);
+  --shadow-pop: 0 0 0 1px rgba(227, 246, 67, 0.35), 5px 5px 16px 0 rgba(227, 246, 67, 0.45), 10px 10px 32px 0 rgba(227, 246, 67, 0.2);
+
+  --ease-wave: var(--ease-standard);
+}

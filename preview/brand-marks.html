@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:0;height:220px;background:var(--night)}
+  .pane{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;border-right:1px solid var(--line)}
+  .pane:last-child{border-right:0}
+  .pane.alt{background:var(--silver)}
+  .pane.alt .l{color:var(--clay)}
+  .l{font:var(--t-spec);text-transform:uppercase;letter-spacing:.08em;color:var(--clay)}
+  img.icon{height:64px}
+  img.word{height:38px}
+  img.tiny{height:22px}
+</style></head>
+<body>
+  <div class="pane">
+    <img src="../assets/wave-icon-white.svg" class="icon" alt="">
+    <div class="l">Icon · 64PX</div>
+  </div>
+  <div class="pane">
+    <img src="../assets/wave-icon-white.svg" class="word" alt="">
+    <div class="l">Icon · 38PX</div>
+  </div>
+  <div class="pane alt">
+    <img src="../assets/wave-icon-white.svg" class="tiny" style="filter:invert(1)" alt="">
+    <div class="l">Min size · 22PX · Inverse</div>
+  </div>
+</body></html>

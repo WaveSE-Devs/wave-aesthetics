@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:28px 32px;height:240px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .btn{font-family:var(--font-mono);font-weight:500;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--silver)}
+  .primary{background:var(--volt);color:var(--night);border-color:var(--volt)}
+  .secondary{border-color:var(--silver);color:var(--silver)}
+  .ghost{color:var(--silver)}
+  .ghost:hover{color:var(--volt)}
+  .danger{background:var(--cherry);color:var(--silver);border-color:var(--cherry)}
+  .icon-btn{padding:10px;width:38px;height:38px;border:1px solid var(--silver);justify-content:center}
+  .arr{font-weight:600}
+</style></head>
+<body>
+  <div>
+    <div class="label" style="margin-bottom:10px">Primary · Secondary · Ghost · Danger</div>
+    <div class="row">
+      <button class="btn primary">WATCH NOW <span class="arr">→</span></button>
+      <button class="btn secondary">ADD TO LIST</button>
+      <button class="btn ghost">SKIP INTRO</button>
+      <button class="btn danger">REMOVE</button>
+    </div>
+  </div>
+  <div>
+    <div class="label" style="margin-bottom:10px">Sizes · Icon · Disabled</div>
+    <div class="row">
+      <button class="btn primary" style="padding:14px 22px;font-size:14px">CONTINUE WATCHING</button>
+      <button class="btn primary" style="padding:6px 12px;font-size:11px">EP. 04</button>
+      <button class="btn icon-btn">▶</button>
+      <button class="btn secondary" disabled style="opacity:.4">UNAVAILABLE</button>
+    </div>
+  </div>
+</body></html>

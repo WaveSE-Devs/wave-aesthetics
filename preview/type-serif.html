@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:420px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .row{display:flex;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .row:last-child{border-bottom:0;padding-bottom:0}
+  .spec{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);min-width:210px}
+  .sample{flex:1;font-family:var(--font-serif);color:var(--silver)}
+  .super{font-weight:400;font-size:14px;line-height:1.3;color:var(--silver)}
+  .display{font-weight:300;font-size:40px;line-height:1.05;letter-spacing:-.01em}
+  .sub{font-weight:400;font-size:22px;line-height:1.3;color:var(--silver)}
+  .body{font-weight:400;font-size:17px;line-height:1.5}
+  .body-it{font-weight:400;font-style:italic;font-size:17px;line-height:1.5}
+  .quote{font-weight:400;font-style:italic;font-size:22px;line-height:1.25;border-left:2px solid var(--volt);padding-left:16px}
+  .quote .att{display:block;margin-top:8px;font-family:var(--font-mono);font-weight:500;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);font-style:normal}
+</style></head>
+<body>
+  <div class="label">IBM Plex Serif · Editorial only · Never on UI chrome</div>
+  <div class="row"><div class="spec">Superheader · 400 / 14</div><div class="sample super">A field report, in five parts —</div></div>
+  <div class="row"><div class="spec">Display · 300 / 40</div><div class="sample display">A different floor.</div></div>
+  <div class="row"><div class="spec">Subheader · 400 / 22</div><div class="sample sub">The trade deadline, the hour after, and the locker room nobody filmed.</div></div>
+  <div class="row"><div class="spec">Body · 400 / 17</div><div class="sample body">Long-form Originals copy and partnership stories. Set in IBM Plex Serif Regular at 17/26.</div></div>
+  <div class="row"><div class="spec">Body Italic · 400 it / 17</div><div class="sample body-it">For emphasis, titles of works, and foreign words within editorial body copy.</div></div>
+  <div class="row"><div class="spec">Pull quote · 400 it / 22</div><blockquote class="sample quote">“The bench tells you more about a team than the scoreboard.”<span class="att">— The Bench, Ep. 02</span></blockquote></div>
+</body></html>

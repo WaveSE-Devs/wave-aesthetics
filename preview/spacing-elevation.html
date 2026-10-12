@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:28px 32px 60px;height:280px;display:flex;align-items:center;gap:28px}
+  .item{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+  .box{width:140px;height:90px;background:var(--slate);display:flex;align-items:center;justify-content:center;font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .b1{border:1px solid var(--line)}
+  .b2{border:1px solid var(--line);box-shadow:0 1px 0 0 rgba(0,0,0,.4)}
+  .b3{border:2px solid var(--volt)}
+  .b4{box-shadow:0 0 0 1px rgba(227,246,67,.35), 5px 5px 16px 0 rgba(227,246,67,.45), 10px 10px 32px 0 rgba(227,246,67,.20);border:0}
+  .tok{font:var(--t-mono-sm);letter-spacing:.04em;color:var(--silver)}
+  .desc{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+</style></head>
+<body>
+  <div class="item"><div class="box b1">FLAT</div><div class="tok">--shadow-flat</div><div class="desc">Default surface</div></div>
+  <div class="item"><div class="box b2">CARD</div><div class="tok">--shadow-card</div><div class="desc">Default card</div></div>
+  <div class="item"><div class="box b3">VOLT</div><div class="tok">--shadow-volt</div><div class="desc">Focus / active</div></div>
+  <div class="item"><div class="box b4">GLOW</div><div class="tok">--shadow-pop</div><div class="desc">Soft volt glow</div></div>
+</body></html>

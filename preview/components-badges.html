@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:28px 32px;height:200px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .badge{font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);color:var(--silver)}
+  .live{background:var(--volt);color:var(--night);border-color:var(--volt)}
+  .live .dot{width:7px;height:7px;border-radius:999px;background:var(--night);animation:pulse 1.4s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.3}}
+  .new{background:var(--silver);color:var(--night);border-color:var(--silver)}
+  .doc{border-color:var(--sky);color:var(--sky)}
+  .pod{border-color:var(--magenta);color:var(--magenta)}
+  .pill{border-radius:999px}
+  .count{background:var(--slate)}
+</style></head>
+<body>
+  <div>
+    <div class="label" style="margin-bottom:10px">Tags · Categories</div>
+    <div class="row">
+      <span class="badge live"><span class="dot"></span>LIVE</span>
+      <span class="badge new">NEW</span>
+      <span class="badge doc">DOC</span>
+      <span class="badge pod">PODCAST</span>
+      <span class="badge">ORIGINAL</span>
+      <span class="badge">EP. 04 / 12</span>
+    </div>
+  </div>
+  <div>
+    <div class="label" style="margin-bottom:10px">Pills · Counts</div>
+    <div class="row">
+      <span class="badge pill">FOLLOWING</span>
+      <span class="badge pill" style="background:var(--volt);color:var(--night);border-color:var(--volt)">+ FOLLOW</span>
+      <span class="badge pill count">12.4K WATCHING</span>
+      <span class="badge pill">3 EPS LEFT</span>
+    </div>
+  </div>
+</body></html>

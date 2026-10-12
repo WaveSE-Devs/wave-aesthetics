@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:28px 32px;height:280px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-content:center}
+  label{display:block;font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+  input,select,textarea{width:100%;background:transparent;border:1px solid var(--line);color:var(--silver);padding:10px 12px;font:var(--t-body-sm);font-family:var(--font-sans);box-sizing:border-box;border-radius:0;outline:none}
+  input:focus{border-color:var(--volt);box-shadow:0 0 0 1px var(--volt)}
+  .field-volt input{border-color:var(--volt);box-shadow:0 0 0 1px var(--volt)}
+  .checkbox{display:flex;align-items:center;gap:10px;font:var(--t-body-sm)}
+  .box{width:18px;height:18px;border:1px solid var(--silver);display:inline-flex;align-items:center;justify-content:center;color:var(--night);background:var(--volt);font-weight:700;font-size:12px}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--silver);font:var(--t-mono-sm);letter-spacing:.04em;text-transform:uppercase}
+  .chip.active{background:var(--volt);color:var(--night);border-color:var(--volt)}
+  .row{display:flex;gap:8px;flex-wrap:wrap}
+</style></head>
+<body>
+  <div>
+    <label>Email</label>
+    <input value="rb@wave.tv" />
+  </div>
+  <div class="field-volt">
+    <label>Search shows</label>
+    <input value="The Bench" />
+  </div>
+  <div>
+    <label>League</label>
+    <select><option>NBA</option><option>NFL</option><option>MLS</option></select>
+  </div>
+  <div>
+    <label>Filters</label>
+    <div class="row">
+      <span class="chip active">ORIGINALS</span>
+      <span class="chip">LIVE</span>
+      <span class="chip">DOC</span>
+      <span class="chip">+ 4</span>
+    </div>
+  </div>
+  <div class="checkbox" style="grid-column:1/-1"><span class="box">✓</span>Email me when new episodes drop</div>
+</body></html>

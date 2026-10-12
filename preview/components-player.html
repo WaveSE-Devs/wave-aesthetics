@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:0;height:240px;background:#0b0909;position:relative;overflow:hidden}
+  .frame{position:absolute;inset:0;background:linear-gradient(180deg,#1a2520 0%,#0b0909 100%)}
+  .scrim{position:absolute;left:0;right:0;bottom:0;height:50%;background:linear-gradient(180deg,transparent,rgba(0,0,0,.85))}
+  .top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:18px 24px;align-items:center}
+  .crumbs{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--silver)}
+  .crumbs span{color:var(--clay)}
+  .live{display:inline-flex;align-items:center;gap:6px;font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;background:var(--volt);color:var(--night)}
+  .live .dot{width:7px;height:7px;border-radius:999px;background:var(--night)}
+  .bottom{position:absolute;left:0;right:0;bottom:0;padding:18px 24px;display:flex;flex-direction:column;gap:14px}
+  .bar{height:3px;background:rgba(250,247,244,.2);position:relative}
+  .bar .fill{position:absolute;left:0;top:0;bottom:0;width:62%;background:var(--volt)}
+  .bar .head{position:absolute;left:62%;top:50%;width:11px;height:11px;background:var(--volt);transform:translate(-50%,-50%)}
+  .ctrls{display:flex;align-items:center;gap:18px;color:var(--silver)}
+  .ctrls .ic{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-size:18px}
+  .ctrls .play{background:var(--volt);color:var(--night);width:42px;height:42px;font-size:18px}
+  .ts{margin-left:auto;font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;color:var(--silver)}
+  .title{font-family:var(--font-display);font-weight:600;font-size:24px;letter-spacing:-.025em;color:var(--silver)}
+  .sub{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-top:-2px}
+</style></head>
+<body>
+  <div class="frame"></div>
+  <div class="scrim"></div>
+  <div class="top">
+    <div class="crumbs">WAVE ORIGINALS <span>/</span> THE BENCH <span>/</span> EP. 04</div>
+    <span class="live"><span class="dot"></span>LIVE</span>
+  </div>
+  <div class="bottom">
+    <div>
+      <div class="title">The Trade</div>
+      <div class="sub">EP. 04 · 32 MIN · DIRECTED BY M. RIVERA</div>
+    </div>
+    <div class="bar"><div class="fill"></div><div class="head"></div></div>
+    <div class="ctrls">
+      <span class="ic">⏮</span>
+      <span class="ic play">▶</span>
+      <span class="ic">⏭</span>
+      <span class="ts">19:48 / 32:00</span>
+      <span class="ic">CC</span>
+      <span class="ic">⛶</span>
+    </div>
+  </div>
+</body></html>

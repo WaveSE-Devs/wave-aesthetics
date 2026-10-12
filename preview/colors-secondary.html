@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:220px}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:12px}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);border:1px solid var(--line)}
+  .sw{height:96px;border-right:1px solid rgba(0,0,0,.25);padding:8px 8px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw:last-child{border-right:0}
+  .sw[data-light="1"]{color:var(--night)}
+  .sw[data-light="0"]{color:var(--silver)}
+  .nm{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .hx{font-family:var(--font-mono);font-weight:500;font-size:9px;letter-spacing:.04em;text-transform:uppercase;opacity:.85}
+</style></head>
+<body>
+  <div class="label">Secondary palette · use only for taxonomy</div>
+  <div class="grid">
+    <div class="sw" style="background:#FFC421" data-light="1"><div class="nm">Yellow</div><div class="hx">#FFC421</div></div>
+    <div class="sw" style="background:#FF8712" data-light="1"><div class="nm">Orange</div><div class="hx">#FF8712</div></div>
+    <div class="sw" style="background:#FA3842" data-light="0"><div class="nm">Red</div><div class="hx">#FA3842</div></div>
+    <div class="sw" style="background:#D12670" data-light="0"><div class="nm">Pink</div><div class="hx">#D12670</div></div>
+    <div class="sw" style="background:#A11791" data-light="0"><div class="nm">Purple</div><div class="hx">#A11791</div></div>
+    <div class="sw" style="background:#A60AFF" data-light="0"><div class="nm">Violet</div><div class="hx">#A60AFF</div></div>
+    <div class="sw" style="background:#590FFF" data-light="0"><div class="nm">Indigo</div><div class="hx">#590FFF</div></div>
+    <div class="sw" style="background:#0A16FF" data-light="0"><div class="nm">Blue</div><div class="hx">#0A16FF</div></div>
+    <div class="sw" style="background:#007DFF" data-light="0"><div class="nm">Azure</div><div class="hx">#007DFF</div></div>
+    <div class="sw" style="background:#0AC2FF" data-light="1"><div class="nm">Cyan</div><div class="hx">#0AC2FF</div></div>
+    <div class="sw" style="background:#69EDE9" data-light="1"><div class="nm">Teal</div><div class="hx">#69EDE9</div></div>
+    <div class="sw" style="background:#0BDD65" data-light="1"><div class="nm">Green</div><div class="hx">#0BDD65</div></div>
+  </div>
+</body></html>

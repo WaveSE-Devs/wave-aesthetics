@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:200px}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+  .row{display:flex;gap:18px;align-items:flex-end}
+  .item{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .box{width:80px;height:80px;background:var(--slate);border:1px solid var(--line)}
+  .box.volt{border:2px solid var(--volt);background:transparent}
+  .tok{font:var(--t-mono-sm);letter-spacing:.04em;color:var(--silver)}
+  .px{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+</style></head>
+<body>
+  <div class="label">Radii · default 0 (brutalist)</div>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:0"></div><div class="tok">--radius-0</div><div class="px">0 · default</div></div>
+    <div class="item"><div class="box" style="border-radius:2px"></div><div class="tok">--radius-1</div><div class="px">2px</div></div>
+    <div class="item"><div class="box" style="border-radius:4px"></div><div class="tok">--radius-2</div><div class="px">4px · chips</div></div>
+    <div class="item"><div class="box" style="border-radius:8px"></div><div class="tok">--radius-3</div><div class="px">8px · avatars</div></div>
+    <div class="item"><div class="box volt" style="border-radius:999px;width:80px;height:32px"></div><div class="tok">--radius-pill</div><div class="px">tags · status</div></div>
+  </div>
+</body></html>

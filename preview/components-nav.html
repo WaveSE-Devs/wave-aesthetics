@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:0;height:120px;background:var(--night);display:flex;align-items:center}
+  nav{width:100%;height:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;gap:32px;background:rgba(11,9,9,.72);backdrop-filter:blur(12px)}
+  .logo{height:18px}
+  .links{display:flex;gap:24px;flex:1}
+  .links a{font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;color:var(--clay);text-decoration:none}
+  .links a.active{color:var(--silver);position:relative;padding-bottom:4px}
+  .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-22px;height:2px;background:var(--volt)}
+  .right{display:flex;align-items:center;gap:14px}
+  .search{padding:6px 10px;border:1px solid var(--line);font:var(--t-mono-sm);letter-spacing:.06em;text-transform:uppercase;color:var(--clay)}
+  .av{width:30px;height:30px;background:var(--clay)}
+</style></head>
+<body>
+  <nav>
+    <img class="logo" src="../assets/wave-logotype.svg">
+    <div class="links">
+      <a class="active">ORIGINALS</a>
+      <a>LIVE</a>
+      <a>SHOWS</a>
+      <a>SCHEDULE</a>
+      <a>SHOP</a>
+    </div>
+    <div class="right">
+      <span class="search">⌕ SEARCH</span>
+      <span class="av"></span>
+    </div>
+  </nav>
+</body></html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 28px;height:240px}
+  .label{font:var(--t-spec);letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:14px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line)}
+  .item{padding:14px 16px;display:flex;align-items:center;gap:14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .item:nth-child(2n){border-right:0}
+  .item:nth-last-child(-n+2){border-bottom:0}
+  .chip{width:28px;height:28px;border:1px solid rgba(255,255,255,.08);flex-shrink:0}
+  .meta{display:flex;flex-direction:column;gap:2px}
+  .role{font:var(--t-caption);font-weight:600}
+  .var{font:var(--t-mono-sm);color:var(--clay);letter-spacing:.04em}
+</style></head>
+<body>
+  <div class="label">Semantic surfaces · dark</div>
+  <div class="grid">
+    <div class="item"><div class="chip" style="background:#0B0909"></div><div class="meta"><div class="role">Page canvas</div><div class="var">--bg · --night</div></div></div>
+    <div class="item"><div class="chip" style="background:#212922"></div><div class="meta"><div class="role">Card / surface</div><div class="var">--bg-elev-1 · --slate</div></div></div>
+    <div class="item"><div class="chip" style="background:#FAF7F4"></div><div class="meta"><div class="role">Foreground</div><div class="var">--fg · --silver</div></div></div>
+    <div class="item"><div class="chip" style="background:#94958B"></div><div class="meta"><div class="role">Foreground · dim</div><div class="var">--fg-dim · --clay</div></div></div>
+    <div class="item"><div class="chip" style="background:#E3F643"></div><div class="meta"><div class="role">Accent</div><div class="var">--fg-accent · --volt</div></div></div>
+    <div class="item"><div class="chip" style="background:#2E332E"></div><div class="meta"><div class="role">Hairline border</div><div class="var">--line</div></div></div>
+  </div>
+</body></html>

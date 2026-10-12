@@ -24,7 +24,7 @@ This repo is an npm package. Every Wave tool installs it instead of keeping its 
 npm install github:WaveSE-Devs/wave-aesthetics
 ```
 
-Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.3.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
+Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.4.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
 
 **Tokens and fonts.** Import once, at the root of the app. This loads `tokens.css`: fonts, CSS variables, the heading face, `.eyebrow` / `.spec`, the Volt focus ring. The fonts load from this package, so you don't copy them into `public/`. It leaves the size and spacing of plain elements to your app.
 
@@ -95,7 +95,7 @@ We substitute **Zalando Sans Expanded** for *Pragmatica Extended* (headers / dis
 | `tailwind/theme.css` | Tailwind v4 `@theme` mapping the tokens to utilities. |
 | `package.json` | Makes the repo installable (`npm install github:WaveSE-Devs/wave-aesthetics`). |
 | `fonts/` | Webfont files (Zalando Sans, Zalando Sans Expanded, Space Grotesk, IBM Plex Serif). |
-| `assets/` | Logos (`wave-logotype.svg`, `wave-icon.svg`), brand reference. |
+| `assets/` | Logos (`wave-logotype.svg`, `wave-icon.svg`), tool app icons (`task-track-icon.png`), brand reference. |
 | `preview/` | Self-contained HTML cards rendered in the Design System tab. |
 | `ui_kits/marketing/` | Marketing site UI kit — hero, nav, show grid, footer, etc. |
 | `ui_kits/originals/` | Wave Originals viewer UI kit — player, episode rail, show hub. |
@@ -260,6 +260,9 @@ Wave's brand guideline does not specify an icon set. We standardize on **Lucide*
 - `assets/wave-logotype.svg` — for headers, footers, page chrome. Min height 16px. Always white on dark or near-black on light. **Never on Volt.**
 - `assets/wave-icon.svg` — square WV icon for app icons, favicons, avatars, social.
 - **Don't** rotate, skew, gradient-fill, drop-shadow, or place on a busy background. Always provide ≥ logo-height of clearspace on every side.
+
+### Tool app icons
+- `assets/task-track-icon.png` — Task Track. 1024×1024, rounded-square app icon with its own black field; use it as-is (don't re-round or re-frame it).
 
 ### Emoji & Unicode glyphs
 - **No emoji in product chrome or brand surfaces.** (User-generated content excepted.)

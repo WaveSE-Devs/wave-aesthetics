@@ -24,7 +24,7 @@ This repo is an npm package. Every Wave tool installs it instead of keeping its 
 npm install github:WaveSE-Devs/wave-aesthetics
 ```
 
-Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.4.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
+Pin a tag or commit (`github:WaveSE-Devs/wave-aesthetics#v0.5.0`) so a change here never lands in an app without you choosing it. To pick up a change, bump the ref and reinstall.
 
 **Tokens and fonts.** Import once, at the root of the app. This loads `tokens.css`: fonts, CSS variables, the heading face, `.eyebrow` / `.spec`, the Volt focus ring. The fonts load from this package, so you don't copy them into `public/`. It leaves the size and spacing of plain elements to your app.
 
@@ -66,6 +66,18 @@ presets: [require("wave-aesthetics/tailwind/preset")],
 
 **Logos.** Import the SVGs (`import icon from "wave-aesthetics/assets/wave-icon.svg"`), or copy them into `public/` when you need a fixed URL, such as a favicon.
 
+**Back to home.** Every tool links back to the Tool Hub the same way: import `back-home.css` once, then add the link. It draws its own arrow and needs nothing else from this package, so tools that don't use the tokens can use it too.
+
+```ts
+import "wave-aesthetics/back-home.css";
+```
+
+```html
+<a class="wave-back-home" href="https://wave-tool-hub.vercel.app">Back to home</a>
+```
+
+A tool with no npm build can copy `back-home.css` in and say which version it came from.
+
 **Plain HTML / prototypes.** Link `colors_and_type.css`, which adds `elements.css` (sizes and spacing for `h1`–`h4`, `p`, `small`, `code`, `blockquote`) so unstyled HTML already looks Wave. The `preview/` cards and `ui_kits/` show it in use.
 
 **Changing the system.** Edit it here, not in an app. Then tag a release and bump the ref in each app that should get the change.
@@ -91,6 +103,7 @@ We substitute **Zalando Sans Expanded** for *Pragmatica Extended* (headers / dis
 | `tokens.css` | **Single source of truth** for color + type tokens, fonts, label classes, focus ring. What apps import. |
 | `elements.css` | Sizes and spacing for plain elements, for unstyled HTML. |
 | `colors_and_type.css` | Both of the above, for plain HTML and prototypes. |
+| `back-home.css` | `.wave-back-home`, the "Back to home" link to the Tool Hub. |
 | `tailwind/preset.js` | Tailwind v3 preset mapping the tokens to utilities. |
 | `tailwind/theme.css` | Tailwind v4 `@theme` mapping the tokens to utilities. |
 | `package.json` | Makes the repo installable (`npm install github:WaveSE-Devs/wave-aesthetics`). |

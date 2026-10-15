@@ -20,7 +20,7 @@ If the user invokes this skill without any other guidance, ask them what they wa
 
 ## Files in this skill
 - `README.md` — full brand context, content + visual foundations, iconography.
-- `tokens.css` — single source of truth for tokens and fonts; `elements.css` — plain-element sizes; `colors_and_type.css` — both, for HTML mocks.
+- `tokens.css` — single source of truth for tokens and fonts; `elements.css` — plain-element sizes; `colors_and_type.css` — both, for HTML mocks. `back-home.css` — `.wave-back-home`, the "Back to home" link every tool uses to return to the Tool Hub.
 - `fonts/` — Zalando Sans, Zalando Sans Expanded, Space Grotesk, IBM Plex Serif.
 - `assets/` — primary lockup, icon mark, brand reference image.
 - `ui_kits/marketing/` — B-to-B marketing site UI kit (React).
